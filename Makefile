@@ -22,9 +22,7 @@ install:
 	case "${PLATFORM}" in \
 	Darwin) \
 		echo macos; \
-		test ! -e "/usr/local/etc/bash_completion.d" && echo 'install bash-completion first!' && exit 1; \
-		cp pinyinmatch /usr/local/bin ;\
-		cp pinyin_completion //usr/local/etc/bash_completion.d/ ;\
+		./install-osx.sh \
 		;; \
 	Linux|CYGWIN*) \
 		echo linux; \
